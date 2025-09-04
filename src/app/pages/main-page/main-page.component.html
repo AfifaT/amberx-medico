@@ -1,0 +1,157 @@
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Your Trusted Local Pharmacy in Aurangabad</h2>
+            <p>
+                Serving the health and wellness needs of our community with care and
+                expertise. Your well-being is our priority.
+            </p>
+
+        </div>
+
+        <!-- Carousel below text -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+                    <div class="slide" *ngFor="let img of images">
+                        <img [src]="img" alt="Pharmacy image" />
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button class="prev" (click)="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                <button class="next" (click)="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Indicators -->
+                <div class="indicators">
+                    <span *ngFor="let img of images; let i = index" (click)="goToSlide(i)"
+                        [class.active]="i === currentIndex"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+            <a href="https://wa.me/919122439488" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container text-center">
+        <h3>Our Services</h3>
+        <p class="section-subtitle">
+            We are a one-stop-shop for all your health and wellness needs, offering a wide range of products and
+            services.
+        </p>
+        <div class="service-grid">
+            <div class="service-card">
+                <h4><i class="fas fa-pills"></i> Medicines</h4>
+                <p>All kinds of prescription and over-the-counter medicines are available.</p>
+            </div>
+            <div class="service-card">
+                <h4><i class="fas fa-leaf"></i> Health & Wellness</h4>
+                <p>Supplements, vitamins, and products for a healthy lifestyle.</p>
+            </div>
+            <div class="service-card">
+                <h4><i class="fas fa-spa"></i> Personal Care</h4>
+                <p>Wide range of personal hygiene and beauty products.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about">
+    <div class="container about-grid">
+        <!-- Text Content -->
+        <div class="about-text">
+            <h3>About AmberX Medico</h3>
+            <p>
+                Established in <strong>2007</strong>, AmberX Medico has been serving the
+                healthcare needs of Aurangabad and surrounding communities with trust and dedication.
+                We provide <strong>genuine medicines, surgicals, baby care, cosmetics, and FMCG products</strong>.
+            </p>
+            <p>
+                Our pharmacy is managed by <strong>S. T. Haque</strong>, a qualified
+                <strong>B. Pharma graduate from Jamia Hamdard University, New Delhi</strong>, with
+                over <strong>15 years of experience</strong> as a
+                <em>Drug Expert & Consultant Pharmacist</em>.
+            </p>
+            <p>
+                As a <strong>Registered Pharmacist (Reg. No. 21102/2007)</strong>, he is committed to
+                delivering the highest standards of professional care and ensuring the
+                well-being of every customer.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="about-image">
+            <img src="assets/images/owner.jpeg" alt="S. T. Haque - Consultant Pharmacist" />
+            <p class="owner-name"><strong>S. T. Haque</strong></p>
+            <p class="owner-title">B. Pharma (Jamia Hamdard, New Delhi)</p>
+            <p class="owner-role">Drug Expert & Consultant Pharmacist</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-phone"></i> Get in Touch</h2>
+        <p class="section-subtitle">
+            We're here to help! Visit us, give us a call, or send us a message.
+        </p>
+
+        <div class="contact-grid">
+            <!-- Contact Details -->
+            <div class="contact-card">
+                <h3>Our Details</h3>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <p><strong>Address:</strong> MG Road, Opposite Hotel Amit, Aurangabad, Bihar - 824101</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone icon"></i>
+                    <p>
+                        <strong>Phone: </strong>
+                        <a href="tel:+919122439488">+91 91224 39488</a>
+                    </p>
+                </div>
+                <div class="detail-item">
+                    <i class="fab fa-whatsapp icon"></i>
+                    <p>
+                        <strong>WhatsApp: </strong>
+                        <a href="https://wa.me/919122439488" target="_blank">+91 91224 39488</a>
+                    </p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>
+                        <strong>Email: </strong>
+                        <a href="mailto:ambermedico@gmail.com">
+                            ambermedico@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="contact-card map-card">
+                <h3><i class="fas fa-map"></i> Find Us on Map</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.316054670542!2d84.36566687514828!3d24.750350478001373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398cfc329cd3303b%3A0x5f1c2be7fdde7757!2sAmbeRx%20Medico%20(Pharmacy)!5e0!3m2!1sen!2sin!4v1756967535105!5m2!1sen!2sin"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
